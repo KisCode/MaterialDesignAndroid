@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialDesignAndroid">
+        <!--        标题栏颜色-->
+        <item name="colorPrimary">?attr/colorPrimary</item>
+
+        <!--        状态栏颜色-->
+        <item name="colorPrimaryDark">?attr/colorPrimaryVariant</item>
+
+        <!--        强调颜色：显示控件交互颜色-->
+        <item name="colorAccent">?attr/colorSecondary</item>
+
+        <!--        窗口颜色-->
+        <item name="android:windowBackground">?attr/colorOnSurface</item>
+
+        <!--        虚拟导航栏颜色-->
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+    </style>
+
+
+
+    <style name="Theme.JetPackPractice.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.JetPackPractice.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
