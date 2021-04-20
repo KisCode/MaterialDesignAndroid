@@ -82,5 +82,16 @@
         </com.google.android.material.tabs.TabLayout>
     </androidx.appcompat.widget.Toolbar>
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/abc_vector_test"
+        android:theme="@style/Theme.MaterialDesignAndroid.AppBarOverlay"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_tab"
+        app:titleTextColor="@color/white" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
