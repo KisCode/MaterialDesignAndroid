@@ -44,7 +44,7 @@ public class ToolbarActivity extends AppCompatActivity {
 
         //通过inflateMenu方式加载 带有SearchView的菜单
         toolbarSearch.inflateMenu(R.menu.menu_toolbar_with_search);
-        initToolBarSearchView(toolbarSearch);
+//        initToolBarSearchView(toolbarSearch);
     }
 
     private void initToolBarSearchView(Toolbar toolbar) {
