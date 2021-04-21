@@ -9,16 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialDesignAndroid">
-        <activity android:name=".NestRecycleViewActivity">
+        <!--    沉浸式状态栏    -->
+        <activity android:name=".ImmersiveStatusActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".NestRecycleViewActivity"></activity>
         <activity android:name=".ToolbarActivity" />
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
