@@ -1,10 +1,12 @@
 package kiscode.material.design;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import kiscode.material.design.coordinator.CoordinatorLayoutSampleActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -30,6 +32,10 @@ public class HomeActivity extends AppCompatActivity {
 
     public void startImmersiveStatus(View view) {
         startDemoActivity(ImmersiveStatusActivity.class);
+    }
+
+    public void startCoordinatorLayout(View view) {
+        startDemoActivity(CoordinatorLayoutSampleActivity.class);
     }
 
     private void startDemoActivity(Class targetActivity) {

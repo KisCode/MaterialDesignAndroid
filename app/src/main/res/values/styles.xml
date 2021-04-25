@@ -52,4 +52,11 @@
         <item name="android:background">@color/purple_200</item>
     </style>
 
+
+    <style name="ThemeOverlay.AppBarLayout" parent="">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+<!--        <item name="popupTheme">@style/Theme.JetPackPractice.PopupOverlay</item>-->
+    </style>
+
 </resources>

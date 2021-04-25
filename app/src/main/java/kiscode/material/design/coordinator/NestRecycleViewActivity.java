@@ -1,15 +1,20 @@
-package kiscode.material.design;
+package kiscode.material.design.coordinator;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import kiscode.material.design.R;
 import kiscode.material.design.adapter.ItemNumAdapter;
 
 public class NestRecycleViewActivity extends AppCompatActivity {
@@ -19,13 +24,37 @@ public class NestRecycleViewActivity extends AppCompatActivity {
     private int mCurrentPos;
     private int mHeadHeight;
 
+    public static void start(Context context) {
+        Intent starter = new Intent(context, NestRecycleViewActivity.class);
+        context.startActivity(starter);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nest_recycle_view);
+        initToolbar();
 
         initViews();
         initRecyclerView();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        //点击返回按钮监听
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void initToolbar() {
+        Toolbar toolBar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolBar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);      //显示向上返回
+        getSupportActionBar().setDisplayShowHomeEnabled(true);      //显示返回按钮
     }
 
     private void initViews() {

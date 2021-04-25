@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialDesignAndroid">
-        <activity android:name=".CoordinatorLayoutActivity"></activity>
+        <activity android:name=".coordinator.CollapsingToolBarImageActivity"></activity>
+        <activity android:name=".coordinator.CollapsingToolbarActivity" />
+        <activity android:name=".coordinator.AppBarLayoutActivity" />
+        <activity android:name=".coordinator.SnackBarActivity" />
+        <activity android:name=".coordinator.CoordinatorLayoutSampleActivity" />
         <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- 沉浸式状态栏 -->
-        <activity android:name=".ImmersiveStatusActivity"></activity>
-        <activity android:name=".NestRecycleViewActivity" />
+        <activity android:name=".ImmersiveStatusActivity" />
+        <activity android:name=".coordinator.NestRecycleViewActivity" />
         <activity android:name=".ToolbarActivity" />
         <activity android:name=".DrawerLayoutActivity" />
     </application>
