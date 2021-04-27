@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
+import kiscode.material.design.util.StatusBarUtil;
+
 public class ImmersiveStatusActivity extends AppCompatActivity {
 
     @Override
@@ -48,21 +50,13 @@ public class ImmersiveStatusActivity extends AppCompatActivity {
         }
     }
 
-    private int getStatusBarHeight(Context context) {
-        int resId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resId > 0) {
-            return context.getResources().getDimensionPixelSize(resId);
-        }
-        return 0;
-    }
-
     /***
      * 修改Toolbar高度，并设置paddingTop
      * @param context
      * @param view
      */
     private void setHeightAndPadding(Context context, View view) {
-        int statusBarHeight = getStatusBarHeight(context);
+        int statusBarHeight = StatusBarUtil.getStatusBarHeight(context);
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
         layoutParams.height += statusBarHeight;
         view.setPadding(view.getPaddingLeft(), view.getPaddingTop() + statusBarHeight, view.getPaddingRight(), view.getPaddingBottom());

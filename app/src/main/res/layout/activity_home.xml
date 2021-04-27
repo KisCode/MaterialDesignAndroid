@@ -44,6 +44,12 @@
         android:text="CoordinatorLayout"
         android:onClick="startCoordinatorLayout"/>
     <View style="@style/style_line_horizonal"/>
+
+    <TextView
+        style="@style/style_item_ripple_home"
+        android:text="BottomSheet"
+        android:onClick="startBottomSheet"/>
+    <View style="@style/style_line_horizonal"/>
     <TextView
         style="@style/style_item_ripple_home"
         android:text="沉浸式状态栏"
